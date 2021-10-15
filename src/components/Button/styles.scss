@@ -1,0 +1,23 @@
+button{
+    border: 0;
+    background: var(--red);
+    padding: 20px;
+
+    color: var(--text);
+    
+    border-radius: 8px;
+    font-size: 16px;
+
+    transition: background .5s;
+
+    &:hover{
+        background: var(--red-hover);
+    }
+}
+
+.outline{
+    border: 2px solid;
+    border-color: var(--red);
+
+    background: none;
+}

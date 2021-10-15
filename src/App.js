@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from './components/Header';
+import { Container } from './components/Container';
+
+import './styles/App.scss';
+import video from './assets/video/spiderman2.mp4';
+import lines from './assets/svg-lines.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+    <Header />
+
+    {/* BACKGROUND VIDEO */}
+      <section className="background">
+        <video className="video" autoPlay muted loop>
+          <source src={video} type="video/mp4" />
+        </video>
+      </section>
+
+    {/* BACKGROUND LINHA */}
+     <section className="background-lines">
+       <img src={lines} alt="Linhas" />
+     </section>
+
+     {/* CONTAINER */}
+      <Container />
+
+
+    </>
   );
 }
 

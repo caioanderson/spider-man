@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 600px;
+
+        .arte-miles {
+            transform-origin: center center;
+            transform-box: fill-box;
+            
+            transition:  scale .3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        span {
+            color: var(--text);
+            font-size: 16px;
+            font-weight: 400;
+            max-width: 600px;
+        }
+
+        .container-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .socials {
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .arte-spider {
+        &:hover {
+            fill: transparent;
+            transition: 0.7s ease;
+
+            animation: logo-spiderman 12s ease infinite alternate;
+        }
+    }
+}
+
